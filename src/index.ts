@@ -1,7 +1,7 @@
-import express from 'express'
+import express from 'express';
 
 const app = express();
-
+//app.use("/people", personRouter)
 app.use(express.json());
 
 app.listen(3000, () =>(

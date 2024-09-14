@@ -1,5 +1,5 @@
 import { NotCreateError } from "../domain/errors/NotCreateError";
-import { IPerson } from "../domain/interfaces/IPerson.interface";
+import { IPerson, IPersonCreate } from "../domain/interfaces/IPerson.interface";
 import { IPersonService } from "../domain/services/IPerson.service";
 
 export class registerPerson{
@@ -8,11 +8,12 @@ export class registerPerson{
 
     }
 
-   async register(person: IPerson){
+   async register(person: IPersonCreate): Promise<IPerson>{
         try {
             const newPerson = await this.personSrv.create(person);
+            return newPerson;
         } catch (error) {
-            throw new NotCreateError("Could not create a new user");
+            throw error || new NotCreateError("Could not create a new user");
         }
     }
 }
