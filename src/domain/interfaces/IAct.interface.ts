@@ -6,8 +6,6 @@ export interface IAct{
     MotherName: string,
     FatherName: string,
     ActName: string,
-
-
 }
 
 export interface IActCreate extends Omit<IAct,'id'> {

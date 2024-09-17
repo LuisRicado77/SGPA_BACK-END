@@ -14,11 +14,9 @@ export interface IPerson{
     zipCode: string,
     neighborhood: string,
     street: string
-
-
 }
  //with this "extends Omit<IPerson,"id">"  we can take the other interface to use her atributes but without id 
 
-export interface IPersonCreate{
+export interface IPersonCreate extends IPerson{
     
 }

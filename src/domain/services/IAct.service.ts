@@ -3,6 +3,6 @@ import { IAct, IActCreate } from "../interfaces/IAct.interface";
 export interface IActService {
     create: (act: IActCreate) => Promise<IAct>;
     get: (id: IAct['id']) => Promise<IAct>
-    delete: () => Promise<IAct>;
-    update: () => Promise<IAct>
+    delete: (id: IAct['id']) => Promise<null>;
+    update: (act: IActCreate) => Promise<IAct>;
 }

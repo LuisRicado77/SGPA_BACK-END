@@ -1,4 +1,5 @@
 export interface IService{
+    
     id: string,
     ServiceType: string,
     NumberMis: number,
@@ -12,8 +13,6 @@ export interface IService{
     topic: string,
     preacher: string,
     CommitteeInCharge: string
-
-s
 }
 
 export interface IServiceCreate extends Omit<IService,'id'>{
