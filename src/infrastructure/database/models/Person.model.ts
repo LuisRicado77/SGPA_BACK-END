@@ -1,6 +1,7 @@
-import { Model, DataType, DataTypes } from "sequelize";
+import { Model, DataType, DataTypes, Sequelize } from 'sequelize';
 import { sequelize } from "../sequelize";
 import { AutoIncrement } from "sequelize-typescript";
+
 
 export class PersonModel extends Model{}
 
