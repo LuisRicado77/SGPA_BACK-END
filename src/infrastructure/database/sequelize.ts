@@ -1,6 +1,6 @@
-const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize({
+import { Sequelize } from "sequelize";
+export const sequelize = new Sequelize({
   dialect: 'mysql',
   host: 'localhost',
   username: 'root',
@@ -21,4 +21,4 @@ async function testConnection() {
 testConnection();
 
 // Exportar usando CommonJS
-module.exports = sequelize;
+
