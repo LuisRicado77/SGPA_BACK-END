@@ -17,6 +17,6 @@ export interface IPerson{
 }
  //with this "extends Omit<IPerson,"id">"  we can take the other interface to use her atributes but without id 
 
-export interface IPersonCreate extends IPerson{
+export interface IPersonCreate extends Omit<IPerson,"id">{
     
 }
