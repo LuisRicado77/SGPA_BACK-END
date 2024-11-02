@@ -5,14 +5,14 @@ import { IAct } from '../interfaces/IAct.interface';
 import { IService } from "../interfaces/IService.interface";
 
 export interface IAdministratorService{
-    login:(password: IAdministrator['password'], username: IAdministrator['username'])=>Promise<string>;
-    changePassword: (oldPassword: IAdministrator['password'],newPassword: IAdministrator['password'] )=> Promise<void>
+    login:                  (password: IAdministrator['password'], username: IAdministrator['username'])=>Promise<void>;
+    changePassword:         (oldPassword: IAdministrator['password'],newPassword: IAdministrator['password'] )=> Promise<void>
 
     //create
-    addAdministrator:       (admin:IAdministratorCreate)=> Promise<IAdministrator>;
-    addPerson:              (person:IPersonCreate)=>Promise<IPerson>;
-    addAct:                 (act: IAct)=>Promise<IAct>;
-    addService:             (service:IService) =>Promise<IService>;
+    addAdministrator:       (admin:IAdministratorCreate)=> Promise<void>;
+    addPerson:              (person:IPersonCreate)=>Promise<void>;
+    addAct:                 (act: IAct)=>Promise<void>;
+    addService:             (service:IService) =>Promise<void>;
 
     //read
     getAdministrator:       (id:IPerson["id"])=>Promise<IAdministrator>
@@ -38,10 +38,10 @@ export interface IAdministratorService{
 
 
     //update
-    updateAdministrator:    (id: IPerson["id"],admin:IAdministrator)=>Promise<IAdministrator>
-    updatePerson:           (id:IPerson['id'],person:IPerson)=>Promise<IPerson>
-    updateAct:              (id:IAct["id"], act:IAct)=>Promise<IAct>
-    updateService:          (id:IService["id"], service:IService)=>Promise<IService>
+    updateAdministrator:    (id: IPerson["id"],admin:IAdministrator)=>Promise<void>
+    updatePerson:           (id:IPerson['id'],person:IPerson)=>Promise<void>
+    updateAct:              (id:IAct["id"], act:IAct)=>Promise<void>
+    updateService:          (id:IService["id"], service:IService)=>Promise<void>
 
 
     //delete
@@ -50,14 +50,4 @@ export interface IAdministratorService{
     deleteAct:              (id:IAct['id'])=>Promise<void>
     deleteService:          (id:IService)=>Promise<void>
     
-    
-
-    
-
-
-
-
-
-
-
 }

@@ -1,6 +1,6 @@
 import { ERROR_MESSAGE } from "./Messages";
 
-export class NotSendNotificationError extends Error {
+export class UnauthorizedAccess extends Error {
     constructor() {
         super(ERROR_MESSAGE.UNAUTHORIZED_ACCESS);
     }
